@@ -302,13 +302,38 @@ RESPONSIVE CSS
 }
 
 /* iPad */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   .select__wrapper { right: 0px; }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
 }
 
 select::-ms-expand {
-        display: none;
-    }
+  display: none;
+}
+
+/*----------------------------------------------------
+DARK MODE
+----------------------------------------------------*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+  h1,
+  article header h2 a {
+    color: white;
+  }
+  nav ul li a:hover,
+  .nav ul li a:hover,
+  nav.pagination a:hover {
+    color: white;
+    border-bottom-color: white;
+  }
+  article section pre {
+    background-color: #333;
+  }
+  article section pre code,
+  article section p code,
+  article section p tt {
+    color: #eee;
+  }
+}
